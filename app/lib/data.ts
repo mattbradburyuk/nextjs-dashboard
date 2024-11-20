@@ -29,6 +29,7 @@ export async function fetchRevenue() {
 }
 
 export async function fetchLatestInvoices() {
+  console.log("MB: fetchLatestInvoices called")
   try {
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
